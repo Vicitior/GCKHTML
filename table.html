@@ -19,19 +19,19 @@
             var shuilv = document.getElementById("select").value;
             if (shuilv == 0.0175)
             {
-                var lixi = cunkuannum * shuilv;
+                var lixi = (cunkuannum * shuilv).toFixed(2);
             }
             else if (shuilv == 0.0225)
             {
-                var lixi = cunkuannum * shuilv * 2;
+                var lixi = (cunkuannum * shuilv * 2).toFixed(2);
             }
             else if (shuilv == 0.0275)
             {
-                var lixi = cunkuannum * shuilv * 3;
+                var lixi = (cunkuannum * shuilv * 3).toFixed(2);
             }
             else
             {
-                var lixi = cunkuannum * 0.0275 * 5;
+                var lixi = (cunkuannum * 0.0275 * 5).toFixed(2);
             }
             var heji = lixi + cunkuannum;
             document.getElementById("printf2").value = lixi;
@@ -62,11 +62,11 @@
                 </td>
             </tr>
             <tr>
-                <td>所得利息</td>
+                <td>所得利息<br>(四舍五入保留两位小数)</td>
                 <td><input id = "printf2" type = "text" class = "form-control" readonly = "readonly"></td>
             </tr>
             <tr>
-                <td>本息合计</td>
+                <td>本息合计<br>(四舍五入保留两位小数)</td>
                 <td><input type = "text" class = "form-control" readonly = "readonly" id = "printf1"></td>
             </tr>
             <tr>
